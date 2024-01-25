@@ -1,0 +1,50 @@
+h1{
+    color: orangered;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
+#Container{
+    width: 1000px;
+    height: 800px;
+    border: 2px solid red;
+    background-color: azure;
+}
+body,html{
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+}
+#Nav{
+    text-align: center;
+    border: 1px solid green;
+}
+.nav-list{
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding: 15px;
+}
+#Header{
+    border: 2px solid blue;
+    text-align: center;
+}
+#Content{
+    border: 1px solid orange;
+    height: 610px;
+}
+#Footer{
+    border: 1px solid purple;
+    text-align: center;
+}
+.section-text{
+    width: 750px;
+    float: left;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+img{
+    float: left;
+}
+#section-header{
+    padding-left: 20px;
+}
