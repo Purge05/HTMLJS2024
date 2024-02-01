@@ -1,7 +1,11 @@
+@font-face {
+    font-family: southpark;
+    src: url(south_park-webfont.woff);
+}
 h1{
-        font-family: "Carter One", system-ui;
-        font-weight: 400;
-        font-style: normal;
+        font-family: Southpark;
+        color: red;
+        font-size: 35px;
       }
 #Container{
     width: 1000px;
@@ -13,6 +17,9 @@ body,html{
     display: flex;
     justify-content: center;
     background-color: cadetblue;
+    background-image: url(../images/South_Park.png);
+    /*background-image: linear-gradient(orange, blue );
+    background-repeat: no-repeat;*/
 }
 #Nav{
     text-align: center;
@@ -33,6 +40,7 @@ body,html{
     height: 610px;
 }
 #Footer{
+    font-family: southpark;
     border: 1px solid black;
     text-align: center;
 }
@@ -57,4 +65,26 @@ img{
 #contact-form{
     width: 500px;
     margin: auto;
+}
+.videos{
+    margin: 30px auto 0 200px;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+    font-family: southpark;
+    font-weight: bold;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: red;
 }
