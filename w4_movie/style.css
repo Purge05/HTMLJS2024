@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(167, 167, 167);
+}
+h1{
+    text-align: center;
+    border: solid black;
+    width: 250px;
+    margin-left: 540px;
+}
+nav {
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    }
+nav a:hover {
+    background-color: #555;
+    height: 95%;
+    }
+#movie_info{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: 350px;
+    gap: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-style: solid;
+    font-size: 27px;
+    color: rgb(37, 37, 37);
+}
+#content {
+    text-align: center;
+}
+
+/* Style for the actors' images */
+#content img {
+    display: inline-block;
+    margin: 10px;
+}
+/* 
+
+#link{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    }
+#footer {
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    }
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    }
+#footer a:hover {
+    background-color: #555;
+    height: 95%;
+    }
+    #info{
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    border-width: 2px;
+    border-radius: 100px;
+    width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+     */
