@@ -49,6 +49,22 @@ nav a:hover {
     display: inline-block;
     margin: 10px;
 }
+#movie_info2 {
+    display: flex;
+    flex-direction: row-reverse; /* This reverses the order of the flex items */
+    text-align: left;
+    height: 350px;
+    gap: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-style: solid;
+    font-size: 27px;
+    color: rgb(37, 37, 37);
+  }
+  
+  #movie_info img {
+    margin-right: 20px; /* Add some space between the image and the text */
+  }
 /* 
 
 #link{
