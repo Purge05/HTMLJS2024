@@ -1,24 +1,9 @@
+table, tr, td{
+  border:1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1{
   text-align: center;
 }
-table, tr, td{
-  border:1px solid black;
-}
-
-
-
-
-/*
-.table{
-  border: 1px solid black;
-  margin-left: 150px;
-  width: 700px;
-  border-collapse: collapse;
-}
-td{
-  border: 2px solid black;
-}
-tbody tr:nth-child(odd){
-  background-color: #8b8b8b;
-}
-*/
