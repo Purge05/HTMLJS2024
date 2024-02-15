@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 JavaScript Lab</title>
+</head>
+    <body>
+        <h1>Week 6 | JavaScript Lab</h1>
+        <p></p>
+        <button>Call function</button>
+        <script>
+            //Your Java Script Goes here
+            var firstName = "Alex";
+            var lastName = "Stevens";
+            var message = `Hello ${firstName} ${lastName}!`
+            var para = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt consectetur ipsa earum amet ut quaerat quae sapiente qui totam, explicabo voluptatibus maxime, quisquam, recusandae consequatur dicta doloribus ab. Ut ratione veniam fugit voluptatum reprehenderit quibusdam tenetur itaque iusto voluptate, officiis commodi quam, blanditiis earum dolores debitis ea laborum expedita ab! Numquam debitis qui aspernatur iusto, molestiae nulla odio adipisci voluptas perspiciatis vitae asperiores amet libero minima nemo sit nesciunt. Fugiat harum accusamus possimus voluptate ullam soluta ipsa consequuntur, impedit numquam distinctio dolorem porro corporis libero veniam tempora maiores sed, pariatur saepe ratione neque vitae, odio qui ea! Quibusdam, sequi beatae."
+            //Example of alert function
+            //alert(firstName + " " + lastName);
+            console.log(`${firstName} ${lastName}`);
+            //This should output message to the page
+
+            function outputToPage(tag, msg, color){
+                document.querySelector(tag).innerHTML = msg;
+                document.querySelector(tag).style.color = color;
+            }
+
+            outputToPage("h1", message, "blue");
+            outputToPage("p", para, "green");
+
+            //Example of Event Handler
+            var dataPromptButton = document.querySelector("button");
+            dataPromptButton.addEventListener('click', dataPrompt);
+
+            function dataPrompt(){
+                alert(`My name is ${firstName} welcome to my program!!`);
+                var yourName = prompt("Please tell me your name.");
+                alert(`Hello ${yourName}! Nice to meet you :) `)
+                var yourLastName = prompt(`Please Enter your Last Name.`);
+                alert(`Your full name is ${yourName} ${yourLastName}!`);
+
+                var firstNumber = prompt("Please enter a number.");
+                var secondNumber = prompt("Please another a number.");
+
+                var result = Number(firstNumber) * Number(secondNumber);
+
+                alert(`Here is your result: ${result}`);
+
+                var documentBody = document.querySelector("body");
+                var outputData = document.createElement("p");
+
+                outputData.innerHTML = `Your name is ${yourName} ${yourLastName} <br> The result of your numbers is ${result}<br> Thank you from ${firstName} ${lastName} :)`;
+
+                documentBody.appendChild(outputData);
+            }
+        </script>
+    </body>
+</html>
