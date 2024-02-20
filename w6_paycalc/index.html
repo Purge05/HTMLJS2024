@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Stevens">
+    <meta name="description" content="Default HTML Page for SE 111">
+    <title>JavaScript Pay Calculator</title>
+</head>
+<body>
+    <script>
+        // Prompt the user to input hourly pay rate, hours worked, and tax rate
+        var hourlyPay = Number(prompt("Enter your hourly pay rate: "));
+        var hoursWorked = Number(prompt("Enter the number of hours worked per week: "));
+        var taxRate = 0.20; // 20%
+
+        // Calculate gross pay, Uncle Sam's share, and net pay
+        var grossPay = hourlyPay * hoursWorked * 2; // Assuming 2 weeks
+        var uncleSamShare = grossPay * taxRate;
+        var netPay = grossPay - uncleSamShare;
+
+        // Display the results using console.log and alert
+        console.log("Gross Pay: $" + grossPay.toFixed(2));
+        console.log("Uncle Sam's Share: $" + uncleSamShare.toFixed(2));
+        console.log("Net Pay: $" + netPay.toFixed(2));
+
+        alert(
+            "Gross Pay: $" + grossPay.toFixed(2) + "\n" +
+            "Uncle Sam's Share: $" + uncleSamShare.toFixed(2) + "\n" +
+            "Net Pay: $" + netPay.toFixed(2)
+        );
+    </script>
+</body>
+</html>
