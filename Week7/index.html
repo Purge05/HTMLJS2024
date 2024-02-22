@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 | Forms and JavaScript</title>
+    <style>
+        table, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 5px;
+        }
+        h1, h2{
+            text-align: center;
+        }
+        #display-info{
+            background-color: rgb(175, 175, 175);
+            border: 1px solid black;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+            padding: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Week 7 Forms and JavaScript Demo</h1>
+
+        <form action="#" method="get">
+            <table>
+                <tr>
+                    <td>
+                        <label for="first">First Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="first" id="first" placeholder="Type Here..." required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="last">Last Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="last" id="last" placeholder="Type Here..." required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age</label>
+                    </td>
+                    <td>
+                        <input type="text" name="age" id="age" placeholder="Type Here..." required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Get Age" id="enter-age">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <span id="error" style="color: red; font-size: 10px; font-style: italic;"></span>
+            <br>
+            <h2>Display Info From Form</h2>
+            <div id="display-info">
+                <p>Your info will be displayed here</p>
+            </div>
+        </form>
+        <script>
+            //This adds the button and event listener
+            var submitButton = document.querySelector("#enter-age")
+            submitButton.addEventListener("click", function(e){
+                e.preventDefault();
+                calculateAnimalAge();
+            });
+
+            //Function for grabbing data from the form and displaying it on the page
+            function calculateAnimalAge(){
+                var firstName = document.querySelector("#first");
+                var lastName = document.querySelector("#last");
+                var age = document.querySelector("#age");
+                var display = document.querySelector("#display-info")
+
+                //Validate that all daa has entered the form
+                if(firstName.value ==='' || lastName.value ==='' || age.value === ''){
+                    //Using the span and id'ing itself you can remove the alert option and put it directly into the innerHTML
+                    // alert("Please enter some missing data");
+                    error.innerHTML = "Please enter some missing data";
+                    return;
+                }
+
+                var dogYears = (Number(age.value)* 7).toFixed();
+                var catYears = (Number(age.value)* 4).toFixed();
+
+                display.innerHTML = `  Your info will be displayed here
+                                        <br>
+                                        <br>
+                                        Here is your info:
+                                        <br>
+                                        <br>
+                                        Your name is ${firstName.value} ${lastName.value}
+                                        <br>
+                                        Your human age is ${age.value}
+                                        <br>
+                                        Your Age in Dog Years: ${dogYears}
+                                        <br>
+                                        Your Age in Cat Years: ${catYears}`;
+            }
+        </script>
+    </body>
+</html>
