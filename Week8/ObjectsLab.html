@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 | Objects and Arrays</title>
+</head>
+    <body id="body">
+        <h1>Week 8 - Objects and Arrays Lab</h1>
+
+        <script>
+            //This is another way to create an array
+            var cars = new Array();
+            cars[0] = "Toyota";
+            cars[1] = "Honda";
+            cars[2] = "Nissan";
+            cars[3] = "Mazda";
+            cars[4] = "Chevy";
+            cars[5] = "Lexus";
+            cars[6] = "Ferrari";
+
+            console.log(cars);
+            console.log(cars[2]);
+
+            var page = document.querySelector("body");
+            
+            for(let i = 0; i < cars.length; i++){
+                //outputs to the console
+                console.log(cars[i]);
+                //outputs to the webpage
+                page.innerHTML += `<p>${cars[i]}</p>`;
+            }
+            
+            var people = [
+                "Jorden", 
+                "Matt", 
+                "Mason", 
+                "Mario",
+                "Brett", 
+                "David", 
+                "Alex"];
+
+                console.log(people);
+
+                //Look at some of the built in function of an array
+                //Adds People to an array
+                //people.push("Jaz");
+                //console.log(people);
+                ////Removes People from array starting from the end
+                //people.pop();
+                //console.log(people);
+                ////Removes Specific People
+                //people.splice(
+                //    0,2
+                //);
+                //console.log(people);
+
+                //Parallel array of colors with people array;
+                var colors = [
+                    "Green",
+                    "Red",
+                    "Blue",
+                    "Blue",
+                    "Yellow",
+                    "Black",
+                    "Purple"
+                ]
+
+                for(let i = 0; i < people.length; i++){
+                    console.log(`${people[i]}'s favorite color is ${colors[i]}`);
+                }
+                
+                //Associative Arrays
+                var sportsTeams = [];
+                sportsTeams["Baseball"] = "Red Sox";
+                sportsTeams["Hockey"] = "Bruins";
+                sportsTeams["Basketball"] = "Celtics";
+                sportsTeams["Football"] = "Patriots";
+                sportsTeams["Soccer"] = "Revolution";
+
+                console.log(sportsTeams["Hockey"]);
+
+                var peopleAndColors = []
+                peopleAndColors[0] = people;
+                peopleAndColors[1] = colors;
+
+                for(let i = 0; i < people.length; i++){
+                    console.log(peopleAndColors[0][i], peopleAndColors[1][i]);
+                }
+
+                //Object Examples
+
+                var SuperMarioCharacter1 = {
+                    name: "Mario",
+                    occupation: "Plumber",
+                    color: "red",
+                    hasMustache: true,
+                    hasSibling: true,
+                    hasHat: true,
+                    jumpHeight: 10,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+                var SuperMarioCharacter2 = {
+                    name: "Luigi",
+                    occupation: "Plumber",
+                    color: "green",
+                    hasMustache: true,
+                    hasSibling: true,
+                    hasHat: true,
+                    jumpHeight: 10,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+                var SuperMarioCharacter3 = {
+                    name: "Peach",
+                    occupation: "Princess",
+                    color: "pink",
+                    hasMustache: false,
+                    hasSibling: false,
+                    hasHat: false,
+                    jumpHeight: 8,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+                var SuperMarioCharacter4 = {
+                    name: "Yoshi",
+                    occupation: "Dinosaur",
+                    color: "green",
+                    hasMustache: false,
+                    hasSibling: true,
+                    hasHat: false,
+                    jumpHeight: 20,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+                var SuperMarioCharacter5 = {
+                    name: "Toad",
+                    occupation: "Servant",
+                    color: "red, white, and blue",
+                    hasMustache: false,
+                    hasSibling: true,
+                    hasHat: true,
+                    jumpHeight: 3,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+                var SuperMarioCharacter6 = {
+                    name: "Bowser",
+                    occupation: "Villan",
+                    color: "orange, yellow, and green",
+                    hasMustache: false,
+                    hasSibling: false,
+                    hasHat: false,
+                    jumpHeight: 50,
+                    sayHello: function(){console.log(`Hello, My Name is ${this.name}`)}
+                }
+
+                var characters = [
+                    SuperMarioCharacter1,
+                    SuperMarioCharacter2,
+                    SuperMarioCharacter3,
+                    SuperMarioCharacter4,
+                    SuperMarioCharacter5,
+                    SuperMarioCharacter6
+                ]
+
+                //Example of for in Loop
+
+                for(let key in characters){
+                    console.log(characters[key].name,
+                    characters[key].occupation);
+                    characters[key].sayHello();
+                }
+
+                //Example of forEach loop
+
+                characters.forEach(function(item, character){
+                    page.innerHTML += `<p>${item.name} ${item.occupation}, ${item.hasMustache}</p>`
+                });
+        </script>
+    </body>
+</html>
